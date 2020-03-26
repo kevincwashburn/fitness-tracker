@@ -1,5 +1,4 @@
 const express = require("express");
-// const path = require("path");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const app = express();
@@ -17,6 +16,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
 require("./controllers/html.js")(app);
 require("./controllers/api.js")(app);
 
-app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
+app.listen(PORT, () => {
+  console.log(`App listening on PORT: " + ${PORT}`);
 });
