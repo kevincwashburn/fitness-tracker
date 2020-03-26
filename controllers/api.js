@@ -1,5 +1,4 @@
 const db = require("../models");
-// const app = require("express").Router();
 
 module.exports = app => {
   app.get("/api/workouts", (req, res) => {
